@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html ng-app = "myapp">
+<head>
+	<meta charset="utf-8">
+	<base href="/Kisan-Selection-Task/">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kisan Job Selection Task</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    </link>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="src/css/app.css" />
+</head>
+<body ng-controller = "cardsData">
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<div class="container">
+			
+		    <a class="navbar-brand" href="#">
+
+		    	<img src="src/img/img.png" alt="Logo" style="width: 100px">
+		    </a>
+		    
+		    <ul class="navbar-nav navbar-right">
+			    <li class="nav-item active text-uppercase"><a class="nav-link" href="#"><b>Home</b></a></li>
+			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Dapibus</b></a></li>
+			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Ultricies</b></a></li>
+			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Bibendum</b></a></li>
+			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Magna</b></a></li>
+		    </ul>
+		</div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid header-jumbotron">
+		<div class="container">
+		  <h4 style="line-height: 1.0;"><b><span class="textmodify">Duis, mollis, est non commodo luctus, </span><br/> <span class="textmodify">nisi erat porttitor ligula, eget lacinia odio</span> <br/><span class="textmodify">sem nec elit</span></b></h4>      
+		</div>
+	</div>
+	<br><br>	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<h3><b>Justo Vulputate Tortor Sem</b></h3>
+				<br>
+				<p style="font-size: 30px">That know ask case his ham dear her spot. Weddings followed the all marianne nor whatever settling. Perhaps six prudent several her had offence. Did had way law dinner square tastes. </p>
+			</div>
+
+  			<div class="col-sm-3">
+  				<div class="card">
+  					<div class="text-center">
+  						<h6 class="text-bold" style="margin-top: 12px;">Submenu</h6>
+  					</div>
+  					<ul class="list-group list-group-flush">
+  						<li class="list-group-item text-bold">Home</li>
+					    <li class="list-group-item text-bold active">Examples</li>
+					    <li class="list-group-item text-bold">Contact</li>
+					    <li class="list-group-item text-bold">About</li>
+  					</ul>
+  				</div>
+  			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+				<p style="font-size: 20px;">
+					Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive. The determine conveying moonlight age. Avoid for see marry sorry child. Sitting so totally forbade hundred to.
+					<br><br>
+					In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman.
+					 <br> 
+					 <span class="split-para"><i>Started several mistake joy say painful removed reached end. State burst think end are its. Started several mistake.</i>
+					 <br>
+					 <span style="float: right; margin-right: 50px; font-size: 20px"> -Lorem Ipsum</span>
+					 </span> 
+
+					 In no impression assistance contrasted. Manners she wishing justice hastily new anxious. At discovery discourse departure objection we. Few extensive add delighted tolerably sincerity her. Law ought him least enjoy decay one quick court. Expect warmly its tended garden him esteem had remove off. Effects dearest staying now sixteen nor improve. 
+				</p>
+				<br><br>
+				
+				<div class="hr-text">
+					<span><h5>More in this series</h5></span>
+				</div>
+				<br><br>
+				<div ng-repeat="card in more_cards">
+					<div class="card more-cards">
+						<div class="row">
+							<div class="col-sm-3">
+								<img ng-src="{{card.img}}" alt="Card image">
+							</div>
+							<div class="col-sm-9">
+								<h4 >{{card.title}}</h4>
+								<p >{{card.description}}</p>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+				
+			</div>
+			<div class="col-sm-3">
+				<div class="card">
+			    	<div class="card-body usercard">
+			    		<div class="card card1"> 
+			    			<img class="card-img-top" src="src/img/img1.jpg" alt="Card image">
+			    			<div class="user-avatar">
+			    				<img src="src/img/user.png" alt="">
+			    			</div>
+			    			<div class="card-body" style="padding: 0.8rem;">
+			    				<ul class="list-group list-group-flush usercard-text list-style">
+								    <li><span>Name</span>Ed Nescio</li>
+								    <li><span>Email</span>ed@example.com</li>
+								    <li><span>Phone</span>+825 555 555</li>
+			  					</ul>
+			    			</div>
+			    		</div>
+
+			    		<div class="card card2">
+		  					<div class="card-header">
+		  						<b style="font-size: 19px;">Send me a message</b>
+		  					</div>
+		  					<form action="#">
+							  <div class="form-group input-padding">
+							    <label class="form-label">Subject:</label>
+							    <input type="text" class="form-control" id="email">
+							  </div>
+							  <div class="form-group input-padding">
+							    <label class="form-label">Message:</label>
+							    <textarea class="form-control" name="message"></textarea>
+							  </div>
+							  <button class="btn btn-primary btn-block btn-margin btn-color"  type="submit">Send</button>
+							</form>
+		  				</div>
+
+		  				<div class="card card3">
+		  					<div class="card-header">
+		  						<b style="font-size: 19px;">Or meet me at the office</b>
+		  					</div>
+		  					<img class="card-img-top" src="src/img/map.png" alt="Card image">
+		  					<div class="card-body">
+			    				<ul class="list-group list-group-flush list-style" style="text-align: left;">
+			  						<li >ONE MIDTOWN</li>
+								    <li >11 Hoi Shing Rd</li>
+								    <li >Tsuen Wan</li>
+			  					</ul>
+			    			</div>
+		  				</div>
+
+			    	</div>
+			  	</div>
+			</div>
+		</div>
+		<br><br>
+
+		<div class="hr-text" class="container-fluid">
+			<span><h5>Related Articles</h5></span>
+		</div>
+
+		<br><br>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4" ng-repeat = "card in related_articles">
+					<div class="card">
+						<img class="card-img-top" ng-src="{{card.img}}" alt = "related articles">
+						<div class="card-body r-articles">
+							<h5 class="card-title">{{card.title}}</h5>
+							<p class="card-text">{{card.description}}</p>
+						</div>
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<br>
+	<div class="jumbotron jumbotron-fluid footer-jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card footer-cards">
+						<div class="card-body">
+							<h5 class="card-title">About Us</h5>
+							<ul class="list-group list-group-flush">
+								<li>Tristique malesuada</li>
+								<li>Cursus</li>
+								<li>Consectetur</li>
+								<li>Euismod vulputate</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card footer-cards">
+						<div class="card-body">
+							<h5 class="card-title">Legal</h5>
+								<ul class="list-group list-group-flush">
+									<li>Etiam justo tristique</li>
+									<li>Vestibulum</li>
+									<li>Inceptos</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card footer-cards">
+						<div class="card-body">
+							<h5 class="card-title">Developers</h5>
+							<ul class="list-group list-group-flush">
+								<li>Cres metis consectetur </li>
+								<li>Purus cit amet</li>
+								<li>Fermentum</li>
+								<li>Etiam porta sem malesuada</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
