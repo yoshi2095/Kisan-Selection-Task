@@ -10,7 +10,7 @@
 
 `cd Kisan-Selection-Task`
 
-#### Now open the termainal and type:
+#### Now run the python server:
 
 `python -m SimpleHTTPServer 8000`
 
