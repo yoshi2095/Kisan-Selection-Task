@@ -1,6 +1,18 @@
 # Kisan-Selection-Task
 
-### Demo: https://yoshi2095.github.io/Kisan-Selection-Task/
+#### Directory Structure:
+
+`/src`
+
+    -- /css
+   
+    -- /img
+   
+    -- /js
+   
+`index.html`
+
+#### Demo: https://yoshi2095.github.io/Kisan-Selection-Task/
 
 ### To run it on local environment do the following: (Note: Python should be pre-installed.)
 
