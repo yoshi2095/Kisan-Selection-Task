@@ -15,21 +15,25 @@
 </head>
 <body ng-controller = "cardsData">
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<div class="container">
 			
 		    <a class="navbar-brand" href="#">
-
 		    	<img src="src/img/img.png" alt="Logo" style="width: 100px">
 		    </a>
-		    
-		    <ul class="navbar-nav navbar-right">
-			    <li class="nav-item active text-uppercase"><a class="nav-link" href="#"><b>Home</b></a></li>
-			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Dapibus</b></a></li>
-			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Ultricies</b></a></li>
-			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Bibendum</b></a></li>
-			    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Magna</b></a></li>
-		    </ul>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			    <span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+				    <li class="nav-item active text-uppercase"><a class="nav-link" href="#"><b>Home</b></a></li>
+				    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Dapibus</b></a></li>
+				    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Ultricies</b></a></li>
+				    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Bibendum</b></a></li>
+				    <li class="nav-item text-uppercase"><a class="nav-link" href="#"><b>Magna</b></a></li>
+		    	</ul>
+			</div>
 		</div>
 	</nav>
 
@@ -82,19 +86,35 @@
 					<span><h5>More in this series</h5></span>
 				</div>
 				<br><br>
-				<div ng-repeat="card in more_cards">
+				<!-- <div ng-repeat="card in more_cards">
 					<div class="card more-cards">
 						<div class="row">
-							<div class="col-sm-3">
+							<div class="col-md-3">
 								<img ng-src="{{card.img}}" alt="Card image">
 							</div>
-							<div class="col-sm-9">
+							<div class="col-md-9">
 								<h4 >{{card.title}}</h4>
 								<p >{{card.description}}</p>
 							</div>
 						</div>
 					</div>
 					<br>
+				</div> -->
+				<div ng-repeat="card in more_cards">
+					<div class="card more-cards">
+				        <div class="row no-gutters">
+				            <div class="col-auto">
+				                <img ng-src="{{card.img}}" class="img-fluid" alt="Card image">
+				            </div>
+				            <div class="col">
+				                <div class="card-block px-2">
+				                    <h4 class="card-title">{{card.title}}</h4>
+				                    <p class="card-text">{{card.description}}</p>
+				                </div>
+				            </div>
+				        </div>
+	    			</div>
+	    			<br>
 				</div>
 				
 			</div>
@@ -128,7 +148,9 @@
 							    <label class="form-label">Message:</label>
 							    <textarea class="form-control" name="message"></textarea>
 							  </div>
-							  <button class="btn btn-primary btn-block btn-margin btn-color"  type="submit">Send</button>
+							  <div class="form-group input-padding">
+							  	<button class="btn btn-primary btn-block btn-color"  type="submit">Send</button>
+							  </div>
 							</form>
 		  				</div>
 
